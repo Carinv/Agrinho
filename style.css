@@ -1,44 +1,219 @@
-@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
+/* Fonte Poppins importada via Google Fonts (já incluída no HTML) */
 
-/* Variáveis */
+/* Definindo variáveis para cores */
 :root {
-    --primary-color: #026773;
-    --secondary-color: #3CA6A6;
-    --text-color: #024959;
-    --background-color: #F2E3D5;
-    --button-hover: #012E40;
-    --font-body: "Chocolate Classical Sans", serif;
-    --font-titulo: "Rakkas", serif;
+  --verde: #2e7d32;
+  --amarelo: #ffeb3b;
+  --fundo: #f4f4f4;
+  --text-color: #333;
+  --cor-acao: #388e3c;
+  --cor-destaque: #ffca28;
 }
 
-/* código omitido */
-/* código omitido */
-
-/* Reset */
+/* Resetando margens e paddings */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* Estilos globais */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--fundo);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-h3 {
-    margin-top: 25px;
+/* Cabeçalho */
+header {
+  background-color: var(--verde);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border-bottom: 5px solid var(--amarelo);
 }
 
-p {
-    margin-top: 20px;
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-img {
-    max-width: 90%;
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
 }
 
-/* código omitido */
+/* Navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: var(--amarelo);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: white;
+  border-bottom: 2px solid var(--amarelo);
+  padding-bottom: 5px;
+}
+
+/* Main Content */
+main {
+  padding: 40px 10%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+}
+
+.conteudo {
+  margin-bottom: 40px;
+}
+
+/* Títulos centralizados e estilizados */
+.conteudo h2 {
+  font-size: 2.5rem;
+  color: var(--verde);
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.conteudo h3 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  color: var(--verde);
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Parágrafos */
+.conteudo p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Parágrafos da conclusão centralizados e com maior tamanho */
+#conclusao p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 10px auto 20px auto;
+  text-align: center;
+  color: var(--text-color);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Imagens */
+.conteudo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Botão */
+.conteudo a.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: var(--amarelo);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.conteudo a.cta-button:hover {
+  background-color: var(--cor-acao);
+  transform: translateY(-3px);
+}
+
+/* Listas estilizadas */
+.conteudo ul {
+  list-style: none;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.conteudo ul li {
+  padding-left: 10px;
+  position: relative;
+}
+
+.conteudo ul li::before {
+  content: '•';
+  color: var(--verde);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--verde);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+footer .cta-footer {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--amarelo);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+footer .cta-footer:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding: 30px 5%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
